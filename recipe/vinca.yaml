@@ -1,0 +1,16 @@
+ros_distro: melodic
+
+fat_archive: true
+name: ros-melodic-fat-all
+
+# mapping for package keys
+conda_index:
+  - 'https://raw.githubusercontent.com/ros-forge/rosdep-conda-forge/master/rosdep/conda-forge.yaml'
+
+packages_skip_by_deps:
+
+packages_select_by_deps:
+  - ros_base
+  - rviz
+
+patch_dir: patch

@@ -1,0 +1,397 @@
+package:
+  name: ros
+  version: 2020.05.15
+
+source:
+  - git_url: https://github.com/ros-gbp/actionlib-release.git
+    git_rev: release/melodic/actionlib/1.12.0-1
+    folder: src/ros-melodic-actionlib
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/actionlib_msgs/1.12.7-0
+    folder: src/ros-melodic-actionlib-msgs
+  - git_url: https://github.com/ros-gbp/geometry_angles_utils-release.git
+    git_rev: release/melodic/angles/1.9.12-1
+    folder: src/ros-melodic-angles
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/melodic/bond/1.8.5-1
+    folder: src/ros-melodic-bond
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/melodic/bond_core/1.8.5-1
+    folder: src/ros-melodic-bond-core
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/melodic/bondcpp/1.8.5-1
+    folder: src/ros-melodic-bondcpp
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/melodic/bondpy/1.8.5-1
+    folder: src/ros-melodic-bondpy
+  - git_url: https://github.com/ros-gbp/catkin-release.git
+    git_rev: release/melodic/catkin/0.7.23-1
+    folder: src/ros-melodic-catkin
+    patches:
+      - patch/ros-melodic-catkin.patch
+  - git_url: https://github.com/ros-gbp/class_loader-release.git
+    git_rev: release/melodic/class_loader/0.4.1-0
+    folder: src/ros-melodic-class-loader
+  - git_url: https://github.com/ros-gbp/cmake_modules-release.git
+    git_rev: release/melodic/cmake_modules/0.4.2-0
+    folder: src/ros-melodic-cmake-modules
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/common_msgs/1.12.7-0
+    folder: src/ros-melodic-common-msgs
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/melodic/cpp_common/0.6.13-1
+    folder: src/ros-melodic-cpp-common
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/diagnostic_msgs/1.12.7-0
+    folder: src/ros-melodic-diagnostic-msgs
+  - git_url: https://github.com/ros-gbp/dynamic_reconfigure-release.git
+    git_rev: release/melodic/dynamic_reconfigure/1.6.3-1
+    folder: src/ros-melodic-dynamic-reconfigure
+  - git_url: https://github.com/ros-gbp/gencpp-release.git
+    git_rev: release/melodic/gencpp/0.6.5-1
+    folder: src/ros-melodic-gencpp
+  - git_url: https://github.com/tork-a/geneus-release.git
+    git_rev: release/melodic/geneus/2.2.6-0
+    folder: src/ros-melodic-geneus
+  - git_url: https://github.com/ros-gbp/genlisp-release.git
+    git_rev: release/melodic/genlisp/0.4.16-0
+    folder: src/ros-melodic-genlisp
+  - git_url: https://github.com/ros-gbp/genmsg-release.git
+    git_rev: release/melodic/genmsg/0.5.15-1
+    folder: src/ros-melodic-genmsg
+  - git_url: https://github.com/RethinkRobotics-release/gennodejs-release.git
+    git_rev: release/melodic/gennodejs/2.0.1-0
+    folder: src/ros-melodic-gennodejs
+  - git_url: https://github.com/ros-gbp/genpy-release.git
+    git_rev: release/melodic/genpy/0.6.9-1
+    folder: src/ros-melodic-genpy
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/geometry_msgs/1.12.7-0
+    folder: src/ros-melodic-geometry-msgs
+  - git_url: https://github.com/ros-gbp/image_common-release.git
+    git_rev: release/melodic/image_transport/1.11.13-0
+    folder: src/ros-melodic-image-transport
+  - git_url: https://github.com/ros-gbp/interactive_markers-release.git
+    git_rev: release/melodic/interactive_markers/1.11.5-1
+    folder: src/ros-melodic-interactive-markers
+  - git_url: https://github.com/ros-gbp/laser_geometry-release.git
+    git_rev: release/melodic/laser_geometry/1.6.5-1
+    folder: src/ros-melodic-laser-geometry
+  - git_url: https://github.com/ros-gbp/navigation_msgs-release.git
+    git_rev: release/melodic/map_msgs/1.13.0-0
+    folder: src/ros-melodic-map-msgs
+  - git_url: https://github.com/ros-gbp/media_export-release.git
+    git_rev: release/melodic/media_export/0.3.0-1
+    folder: src/ros-melodic-media-export
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/message_filters/1.14.5-1
+    folder: src/ros-melodic-message-filters
+  - git_url: https://github.com/ros-gbp/message_generation-release.git
+    git_rev: release/melodic/message_generation/0.4.1-1
+    folder: src/ros-melodic-message-generation
+  - git_url: https://github.com/ros-gbp/message_runtime-release.git
+    git_rev: release/melodic/message_runtime/0.4.12-0
+    folder: src/ros-melodic-message-runtime
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/mk/1.14.8-1
+    folder: src/ros-melodic-mk
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/nav_msgs/1.12.7-0
+    folder: src/ros-melodic-nav-msgs
+  - git_url: https://github.com/ros-gbp/nodelet_core-release.git
+    git_rev: release/melodic/nodelet/1.9.16-0
+    folder: src/ros-melodic-nodelet
+  - git_url: https://github.com/ros-gbp/nodelet_core-release.git
+    git_rev: release/melodic/nodelet_core/1.9.16-0
+    folder: src/ros-melodic-nodelet-core
+  - git_url: https://github.com/ros-gbp/nodelet_core-release.git
+    git_rev: release/melodic/nodelet_topic_tools/1.9.16-0
+    folder: src/ros-melodic-nodelet-topic-tools
+  - git_url: https://github.com/ros-gbp/pluginlib-release.git
+    git_rev: release/melodic/pluginlib/1.12.1-0
+    folder: src/ros-melodic-pluginlib
+  - git_url: https://github.com/ros-gbp/python_qt_binding-release.git
+    git_rev: release/melodic/python_qt_binding/0.4.0-1
+    folder: src/ros-melodic-python-qt-binding
+  - git_url: https://github.com/ros-gbp/resource_retriever-release.git
+    git_rev: release/melodic/resource_retriever/1.12.6-1
+    folder: src/ros-melodic-resource-retriever
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/ros/1.14.8-1
+    folder: src/ros-melodic-ros
+  - git_url: https://github.com/ros-gbp/metapackages-release.git
+    git_rev: release/melodic/ros_base/1.4.1-0
+    folder: src/ros-melodic-ros-base
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/ros_comm/1.14.5-1
+    folder: src/ros-melodic-ros-comm
+  - git_url: https://github.com/ros-gbp/metapackages-release.git
+    git_rev: release/melodic/ros_core/1.4.1-0
+    folder: src/ros-melodic-ros-core
+  - git_url: https://github.com/ros-gbp/ros_environment-release.git
+    git_rev: release/melodic/ros_environment/1.2.2-1
+    folder: src/ros-melodic-ros-environment
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosbag/1.14.5-1
+    folder: src/ros-melodic-rosbag
+  - git_url: https://github.com/ros-gbp/rosbag_migration_rule-release.git
+    git_rev: release/melodic/rosbag_migration_rule/1.0.0-0
+    folder: src/ros-melodic-rosbag-migration-rule
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosbag_storage/1.14.5-1
+    folder: src/ros-melodic-rosbag-storage
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/rosbash/1.14.8-1
+    folder: src/ros-melodic-rosbash
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/rosboost_cfg/1.14.8-1
+    folder: src/ros-melodic-rosboost-cfg
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/rosbuild/1.14.8-1
+    folder: src/ros-melodic-rosbuild
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/rosclean/1.14.8-1
+    folder: src/ros-melodic-rosclean
+  - git_url: https://github.com/ros-gbp/rosconsole-release.git
+    git_rev: release/melodic/rosconsole/1.13.11-1
+    folder: src/ros-melodic-rosconsole
+  - git_url: https://github.com/ros-gbp/rosconsole_bridge-release.git
+    git_rev: release/melodic/rosconsole_bridge/0.5.3-0
+    folder: src/ros-melodic-rosconsole-bridge
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/roscpp/1.14.5-1
+    folder: src/ros-melodic-roscpp
+    patches:
+      - patch/ros-melodic-roscpp.patch
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/melodic/roscpp_core/0.6.13-1
+    folder: src/ros-melodic-roscpp-core
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/melodic/roscpp_serialization/0.6.13-1
+    folder: src/ros-melodic-roscpp-serialization
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/melodic/roscpp_traits/0.6.13-1
+    folder: src/ros-melodic-roscpp-traits
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/roscreate/1.14.8-1
+    folder: src/ros-melodic-roscreate
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosgraph/1.14.5-1
+    folder: src/ros-melodic-rosgraph
+  - git_url: https://github.com/ros-gbp/ros_comm_msgs-release.git
+    git_rev: release/melodic/rosgraph_msgs/1.11.2-0
+    folder: src/ros-melodic-rosgraph-msgs
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/roslang/1.14.8-1
+    folder: src/ros-melodic-roslang
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/roslaunch/1.14.5-1
+    folder: src/ros-melodic-roslaunch
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/roslib/1.14.8-1
+    folder: src/ros-melodic-roslib
+  - git_url: https://github.com/ros-gbp/roslisp-release.git
+    git_rev: release/melodic/roslisp/1.9.24-1
+    folder: src/ros-melodic-roslisp
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/roslz4/1.14.5-1
+    folder: src/ros-melodic-roslz4
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/rosmake/1.14.8-1
+    folder: src/ros-melodic-rosmake
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosmaster/1.14.5-1
+    folder: src/ros-melodic-rosmaster
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosmsg/1.14.5-1
+    folder: src/ros-melodic-rosmsg
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosnode/1.14.5-1
+    folder: src/ros-melodic-rosnode
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosout/1.14.5-1
+    folder: src/ros-melodic-rosout
+  - git_url: https://github.com/ros-gbp/rospack-release.git
+    git_rev: release/melodic/rospack/2.5.5-1
+    folder: src/ros-melodic-rospack
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosparam/1.14.5-1
+    folder: src/ros-melodic-rosparam
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rospy/1.14.5-1
+    folder: src/ros-melodic-rospy
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rosservice/1.14.5-1
+    folder: src/ros-melodic-rosservice
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rostest/1.14.5-1
+    folder: src/ros-melodic-rostest
+  - git_url: https://github.com/ros-gbp/roscpp_core-release.git
+    git_rev: release/melodic/rostime/0.6.13-1
+    folder: src/ros-melodic-rostime
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/rostopic/1.14.5-1
+    folder: src/ros-melodic-rostopic
+  - git_url: https://github.com/ros-gbp/ros-release.git
+    git_rev: release/melodic/rosunit/1.14.8-1
+    folder: src/ros-melodic-rosunit
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/roswtf/1.14.5-1
+    folder: src/ros-melodic-roswtf
+  - git_url: https://github.com/ros-gbp/rviz-release.git
+    git_rev: release/melodic/rviz/1.13.12-1
+    folder: src/ros-melodic-rviz
+    patches:
+      - patch/ros-melodic-rviz.patch
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/sensor_msgs/1.12.7-0
+    folder: src/ros-melodic-sensor-msgs
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/shape_msgs/1.12.7-0
+    folder: src/ros-melodic-shape-msgs
+  - git_url: https://github.com/ros-gbp/bond_core-release.git
+    git_rev: release/melodic/smclib/1.8.5-1
+    folder: src/ros-melodic-smclib
+  - git_url: https://github.com/ros-gbp/std_msgs-release.git
+    git_rev: release/melodic/std_msgs/0.5.12-0
+    folder: src/ros-melodic-std-msgs
+  - git_url: https://github.com/ros-gbp/ros_comm_msgs-release.git
+    git_rev: release/melodic/std_srvs/1.11.2-0
+    folder: src/ros-melodic-std-srvs
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/stereo_msgs/1.12.7-0
+    folder: src/ros-melodic-stereo-msgs
+  - git_url: https://github.com/ros-gbp/geometry-release.git
+    git_rev: release/melodic/tf/1.12.1-1
+    folder: src/ros-melodic-tf
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/melodic/tf2/0.6.5-0
+    folder: src/ros-melodic-tf2
+    patches:
+      - patch/ros-melodic-tf2.patch
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/melodic/tf2_msgs/0.6.5-0
+    folder: src/ros-melodic-tf2-msgs
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/melodic/tf2_py/0.6.5-0
+    folder: src/ros-melodic-tf2-py
+  - git_url: https://github.com/ros-gbp/geometry2-release.git
+    git_rev: release/melodic/tf2_ros/0.6.5-0
+    folder: src/ros-melodic-tf2-ros
+    patches:
+      - patch/ros-melodic-tf2-ros.patch
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/topic_tools/1.14.5-1
+    folder: src/ros-melodic-topic-tools
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/trajectory_msgs/1.12.7-0
+    folder: src/ros-melodic-trajectory-msgs
+  - git_url: https://github.com/ros-gbp/urdf-release.git
+    git_rev: release/melodic/urdf/1.13.2-1
+    folder: src/ros-melodic-urdf
+  - git_url: https://github.com/ros-gbp/urdf-release.git
+    git_rev: release/melodic/urdf_parser_plugin/1.13.2-1
+    folder: src/ros-melodic-urdf-parser-plugin
+  - git_url: https://github.com/ros-gbp/common_msgs-release.git
+    git_rev: release/melodic/visualization_msgs/1.12.7-0
+    folder: src/ros-melodic-visualization-msgs
+  - git_url: https://github.com/ros-gbp/ros_comm-release.git
+    git_rev: release/melodic/xmlrpcpp/1.14.5-1
+    folder: src/ros-melodic-xmlrpcpp
+
+build:
+  number: 0
+
+outputs:
+  - name: ros-melodic-fat-all
+    requirements:
+      build:
+        - "{{ compiler('cxx') }}"
+        - "{{ compiler('c') }}"
+        - ninja
+        - cmake
+      host:
+        - apr
+        - boost 1.72.*
+        - bzip2
+        - catkin_pkg
+        - cmake
+        - console_bridge
+        - coverage
+        - defusedxml
+        - eigen
+        - empy
+        - gmock
+        - graphviz 2.38.*
+        - gtest
+        - libcurl
+        - log4cxx
+        - lz4
+        - mock
+        - netifaces
+        - nose
+        - numpy
+        - openssl
+        - paramiko
+        - pillow
+        - pkg-config
+        - poco
+        - pycryptodome
+        - python {{ python }}
+        - python-gnupg
+        - pyyaml
+        - qt
+        - rosdep
+        - rospkg
+        - setuptools
+        - tinyxml
+        - tinyxml2
+        - urdfdom
+        - urdfdom_headers
+        - yaml-cpp
+      run:
+        - apr
+        - boost 1.72.*
+        - bzip2
+        - catkin_pkg
+        - cmake
+        - console_bridge
+        - defusedxml
+        - eigen
+        - empy
+        - gmock
+        - graphviz 2.38.*
+        - gtest
+        - libcurl
+        - log4cxx
+        - lz4
+        - netifaces
+        - nose
+        - numpy
+        - openssl
+        - paramiko
+        - pkg-config
+        - poco
+        - pycryptodome
+        - python {{ python }}
+        - python-gnupg
+        - pyyaml
+        - qt
+        - rosdep
+        - rospkg
+        - tinyxml
+        - tinyxml2
+        - urdfdom
+        - urdfdom_headers
+        - yaml-cpp
+    script: bld_catkin_merge.bat
+
+about:
+  home: https://www.ros.org/
+  license: BSD-3-Clause
+  summary: |
+    Robot Operating System
+
+extra:
+  recipe-maintainers:
+    - ros-forge
