@@ -94,8 +94,8 @@ jobs:
     - script: |
         call activate base
         set PATH
-        where libcrypto-1_1-x64.dll
-        where libssl-1_1-x64.dll
+        dir /s /b c:\Miniconda\*libcrypto-1_1-x64.dll
+        dir /s /b c:\Miniconda\*libssl-1_1-x64.dll
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
