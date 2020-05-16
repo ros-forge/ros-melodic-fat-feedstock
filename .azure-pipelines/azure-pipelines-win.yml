@@ -56,7 +56,7 @@ jobs:
 
     - task: CondaEnvironment@1
       inputs:
-        packageSpecs: 'python=3.6 conda-build conda conda-forge::conda-forge-ci-setup=3 pip' # Optional
+        packageSpecs: 'python=3.6 conda-build conda conda-forge::conda-forge-ci-setup=3.0.8 openssl=1.1.1a pip' # Optional
         installOptions: "-c conda-forge"
         updateConda: true
       displayName: Install conda-build and activate environment
@@ -94,8 +94,6 @@ jobs:
     - script: |
         call activate base
         set PATH
-        copy /Y c:\Miniconda\Library\mingw64\bin\libcrypto-1_1-x64.dll c:\windows\system32\libcrypto-1_1-x64.dll
-        copy /Y c:\Miniconda\Library\mingw64\bin\libssl-1_1-x64.dll c:\windows\system32\libssl-1_1-x64.dll
         dir /s /b c:\Miniconda\*libcrypto-1_1-x64.dll
         dir /s /b c:\Miniconda\*libssl-1_1-x64.dll
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
