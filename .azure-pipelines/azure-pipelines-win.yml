@@ -100,6 +100,7 @@ jobs:
         set GIT_TRACE_PERFORMANCE=true
         set GIT_TRACE_SETUP=true
         set GIT_TRACE_SHALLOW=true
+        set MSYS_NO_PATHCONV=1
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
