@@ -93,20 +93,13 @@ jobs:
 
     - script: |
         call activate base
-        git config --global credential.helper manager
-        git config --system credential.helper manager
-        git config --local credential.helper manager
-        git config --global http.sslbackend openssl
-        git config --system http.sslbackend openssl
-        git config --local http.sslbackend openssl
-        git config --global http.sslcainfo "C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt"
-        git config --system http.sslcainfo "C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt"
-        git config --local http.sslcainfo "C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt"
-        git config --global include.path "C:/Program Files/Git/etc/gitconfig"
-        git config --system include.path "C:/Program Files/Git/etc/gitconfig"
-        git config --local include.path "C:/Program Files/Git/etc/gitconfig"
-        git config -l
         set GIT_TRACE=1
+        set GIT_TRACE_PACK_ACCESS=true
+        set GIT_TRACE_PACKET=true
+        set GIT_TRACE_PACKFILE=true
+        set GIT_TRACE_PERFORMANCE=true
+        set GIT_TRACE_SETUP=true
+        set GIT_TRACE_SHALLOW=true
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
