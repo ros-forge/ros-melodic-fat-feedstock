@@ -94,6 +94,8 @@ jobs:
     - script: |
         call activate base
         git config --global credential.helper manager
+        git config --system credential.helper manager
+        git config --local credential.helper manager
         git config -l
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
