@@ -93,6 +93,7 @@ jobs:
 
     - script: |
         call activate base
+        set "gitdir=c:\Miniconda\Library\"
         set "PATH=c:\Miniconda\Library\cmd;%PATH%"
         dir /s /b c:\Miniconda\*libcrypto-1_1-x64.dll
         dir /s /b c:\Miniconda\*libssl-1_1-x64.dll
