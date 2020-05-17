@@ -92,6 +92,7 @@ jobs:
       condition: contains(variables['CONFIG'], 'vs2008')
 
     - script: |
+        git config -l
         call activate base
         git config -l
         set GIT_EXEC_PATH=c:\Miniconda\Library\mingw64\libexec\git-core
