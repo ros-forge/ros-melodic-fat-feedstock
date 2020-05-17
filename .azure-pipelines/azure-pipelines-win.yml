@@ -96,6 +96,12 @@ jobs:
         git config --global credential.helper manager
         git config --system credential.helper manager
         git config --local credential.helper manager
+        git config --global http.sslbackend openssl
+        git config --system http.sslbackend openssl
+        git config --local http.sslbackend openssl
+        git config --global http.sslcainfo C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+        git config --system http.sslcainfo C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+        git config --local http.sslcainfo C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
         git config -l
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
