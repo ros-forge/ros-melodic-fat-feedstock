@@ -93,9 +93,7 @@ jobs:
 
     - script: |
         call activate base
-        set "gitdir=c:\Miniconda\Library\"
-        set "PATH=c:\Miniconda\Library\cmd;%PATH%"
-        where git
+        git config -l
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
