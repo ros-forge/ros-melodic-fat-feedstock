@@ -56,7 +56,7 @@ jobs:
 
     - task: CondaEnvironment@1
       inputs:
-        packageSpecs: 'python=3.6 conda-build conda conda-forge::conda-forge-ci-setup=3.0.8 pip' # Optional
+        packageSpecs: 'python=3.6 conda-build conda conda-forge::conda-forge-ci-setup=3 pip' # Optional
         installOptions: "-c conda-forge"
         updateConda: true
       displayName: Install conda-build and activate environment
@@ -81,9 +81,6 @@ jobs:
     # Special cased version setting some more things!
     - script: |
         call activate base
-        set PATH
-        where libcrypto-1_1-x64.dll
-        where libssl-1_1-x64.dll
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe (vs2008)
       env:
@@ -93,14 +90,6 @@ jobs:
 
     - script: |
         call activate base
-        set GIT_TRACE=1
-        set GIT_TRACE_PACK_ACCESS=true
-        set GIT_TRACE_PACKET=true
-        set GIT_TRACE_PACKFILE=true
-        set GIT_TRACE_PERFORMANCE=true
-        set GIT_TRACE_SETUP=true
-        set GIT_TRACE_SHALLOW=true
-        set MSYS_NO_PATHCONV=1
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
