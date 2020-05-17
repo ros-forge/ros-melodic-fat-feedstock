@@ -106,6 +106,7 @@ jobs:
         git config --system include.path "C:/Program Files/Git/etc/gitconfig"
         git config --local include.path "C:/Program Files/Git/etc/gitconfig"
         git config -l
+        set GIT_TRACE=1
         conda.exe build "recipe" -m .ci_support\%CONFIG%.yaml
       displayName: Build recipe
       env:
